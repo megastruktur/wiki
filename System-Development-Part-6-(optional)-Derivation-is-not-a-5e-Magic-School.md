@@ -96,17 +96,19 @@ Replace “MySystem” in ActorMySystem with whatever you want, as long as you f
 
     export  class  ActorMySystem  extends  Actor {
     
-    prepareData() {
-    
-    super.prepareData();
-    
-    const  actorData = this.data;
-    
-    const  data = actorData.data;  
-    if (actorData.type === "character") {
-    
-    data.defense.value = Number(attr.agility.value)+Number(attr.dodge.value);
-    
+      prepareData() {
+
+        super.prepareData();
+
+        const  actorData = this.data;
+
+        const  data = actorData.data;  
+        if (actorData.type === "character") {
+
+          data.defense.value = Number(attr.agility.value)+Number(attr.dodge.value);
+
+        }
+      }
     }
     
       
